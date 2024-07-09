@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Gurmukhi:wght@100..800&display=swap');
+*{
+  margin:0;
+}
+body{
+  font-family: "Anek Gurmukhi", Arial, Helvetica;
+  margin: 8px;
+  background-color: rgb(12, 17, 17);
+  overflow-x: hidden;
+}
+.loader{
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navCon{
+  margin-top: 50px;
+  padding-inline: 5px;
+  margin-bottom: 10px;
+  min-width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navCon >h2{
+  color: #FAED26;
+}
+.navCon > ul{
+  min-width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.navCon > img{
+  display: none;
+}
+.navLink, .navLink:active{
+  text-decoration: none;
+  color: white;
+  border-radius: 10%;
+}
+.navLink:hover{
+  transition: 0.1s;
+  border-bottom: solid 1px #FAED26;
+}
+.headerCon{
+  margin-block: 50px;
+  min-width: 100%;
+  height: 50px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+#searchBar{
+  min-width: 400px;
+  padding-block: 9px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 20px;
+}
+#searchBar:hover{
+  transition: 0.3s;
+  box-shadow:  1px 0.3px 6px 0.5px #FAED26;
+}
+.searchBtn{
+  background-color: #FAED26;
+  border: none;
+  border-radius: 50%;
+  padding-block: 8px;
+  padding-inline: 9px;
+  cursor: pointer;
+}
+.searchBtn:hover{
+  transition: 0.2s;
+  filter: drop-shadow(1px 2px 5px #FAED26);
+}
+.searchBtn>img{
+  width: 20px;
+}
+.movieCon{
+  min-width: 100%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.movieCardCon{
+  min-width: 200px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(33,33,33);
+  color: white;
+  border-radius: 5%;
+  margin: 4px;
+  text-align: center;
+}
+.movieCardCon:hover{
+  min-width: 230px;
+  transition: 0.4s;
+}
+.movieCardCon > img{
+  aspect-ratio: 2/3;
+  width: 150px; 
+}
+.movieCardCon > button{
+  cursor: pointer;
+  color: black;
+  background-color: #FAED26;
+  padding: 8px;
+  border: none;
+  border-radius: 8%;
+}
+.movieCardCon > button:hover, .pageContainer >button:hover{
+  transition: 0.4s;
+  border: solid 1.5px #FAED26;
+  color: white;
+  background-color: transparent;
+}
+.pageContainer{
+  margin-block: 50px;
+  color: white;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.pageContainer >button{
+  cursor: pointer;
+  color: black;
+  background-color: #FAED26;
+  padding-block: 8px;
+  padding-inline: 20px;
+  border: none;
+  border-radius: 8%;
+}
+.itemDetailsCon{
+  margin-top: 50px;
+  min-width: 100%;
+  min-height: 500px;
+  padding-block: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+.itemDetailsCon>h2{
+  color: #FAED26;
+}
+.itemDescriptionCon{  
+  display: flex;
+  gap: 2rem;
+}
+.itemDescriptionCon > img{
+  width: 300px;
+}
+.descriptionCon{
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.descriptionCon > p > span{
+  color: #FAED26;
+}
+iframe{
+  min-width: 90%;
+  height: 500px;
+}
+.about{ 
+  margin-top: 30px;
+  height: 500px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.about>h2{
+  color: #FAED26;
+}
+.errorCon{
+  color: white;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.errorCon > .link, .errorCon > .link:active{
+  font-weight: bold;
+  background-color: #FAED26;
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+  border: none;
+  border-radius: 5%;
+}
+.errorCon > .link:hover{
+  transition: 0.2s;
+  border: solid 1px #FAED26;
+  background-color: transparent;
+  color: white;
+}
+@media screen and (max-width: 870px){
+  .movieCon{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (max-width: 670px){
+  .movieCon{
+    grid-template-columns: 1fr 1fr;
+  }
+  #searchBar{
+    min-width: 300px;
+  }
+}
