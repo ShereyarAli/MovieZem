@@ -28,7 +28,7 @@ export const Item = ({id,first_air_date,release_date,overview,genre_ids,poster_p
   return (
     <>
       <div className="movieCardCon">
-        <img src={poster_path ? `https://image.tmdb.org/t/p/original/${poster_path}`: defaultImage} alt='' />
+        <img loading='lazy' src={poster_path ? `https://image.tmdb.org/t/p/original/${poster_path}`: defaultImage} alt='' />
         <p>{title || name}</p>
         <button onClick={handleClick}>Watch Trailer</button>
     </div>
